@@ -157,6 +157,7 @@ void leerArchivo(const string& nombreArchivo) {
 
 
 int inventario(); // Prototipo de la función inventario
+int cajero();
 
 int main() {
     int opcion;
@@ -174,7 +175,8 @@ int main() {
         cout << " |       Opcion 7 Encriptar archivo                             | \n";
         cout << " |       Opcion 8 leer archivo                                  | \n";
         cout << " |       Opcion 9 programa de gestion de inventario             | \n";
-        cout << " |       Opcion 10 Salir                                        | \n";
+        cout << " |       Opcion 10 programa de cajero                           | \n";
+        cout << " |       Opcion 11 Salir                                        | \n";
         cout << "0----------------------------------------------------------------0\n";
         cout << "0================================================================0\n";
         cout << "Opcion escogida ==> ";
@@ -220,13 +222,16 @@ int main() {
                 inventario();
                 break;
             case 10:
+                cajero();
+                break;
+            case 11:
                 cout << "Gracias por usar el programa :)" << endl;
                 break;
             default:
                 cout << "Opción no válida, por favor seleccione una opción del 1 al 10" << endl;
                 break;
         }
-    } while (opcion != 10);  // Se cambia la condición para que salga del bucle al seleccionar la opción 9
+    } while (opcion != 11);  // Se cambia la condición para que salga del bucle al seleccionar la opción 9
 
     return 0;
 }
